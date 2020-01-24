@@ -1,0 +1,25 @@
+.topNavBar {
+    vertical-align: top;
+    background-color: #939393;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 5px 5px;
+}
+.topNavBar a {
+    font-family: 'Arimo', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5em;
+    flex-basis: auto;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    padding: 15px 5px;
+    margin: 10px 5px;
+}
+.topNavBar a:hover {
+    background-color: #333;
+    color: white;
+    border: 1px solid white;
+
+
+}
