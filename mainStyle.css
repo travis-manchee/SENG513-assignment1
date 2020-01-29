@@ -1,25 +1,68 @@
+/* General Top Navigation Bar Formatting*/
 .topNavBar {
     vertical-align: top;
+    width: 100%;
+    white-space:nowrap;
     background-color: #939393;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    padding: 5px 5px;
+    padding: 15px 5px;
 }
+
+/* Top Navigation Link Formatting*/
 .topNavBar a {
     font-family: 'Arimo', sans-serif;
     font-family: 'Roboto Mono', monospace;
     font-size: 1.5em;
-    flex-basis: auto;
-    border-radius: 10px;
-    border: 1px solid transparent;
-    padding: 15px 5px;
-    margin: 10px 5px;
+    border: 1px solid transparent;/* this exists to prevent css jittering*/
+    border-radius: 5px;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: inherit;
 }
 .topNavBar a:hover {
-    background-color: #333;
+    background-color: #414141;
     color: white;
     border: 1px solid white;
+}
 
+/* Formatting for the active page link in Top Navigation Bar*/
+.topNavBar a.active {
+    text-decoration: underline;
+}
+.topNavBar a.active:hover{
+    background-color: #939393;
+    border: 1px solid transparent;
+}
 
+/*Formatting to make inner-page navigation invisible*/
+.defaultHiddenList {
+    display: none;
+    position: absolute;
+    background-color: #939393;
+    padding: 0;
+}
+
+/* Display inner-page navigation when hovering on active page link*/
+.topNavBar .topNavDropdown:hover .defaultHiddenList{
+    display: block;
+}
+
+/* This prevents the Current page link from doing weird formatting*/
+.topNavBar .topNavDropdown{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.topNavBar .hiddenLink {
+    display:block;
+    margin: 10px;
+    font-size: 1em;
+}
+.topNavBar .hiddenLink:hover {
+    border: 1px solid transparent;
+    background-color: #939393;
+}
+
+#hiddenContent {
+    display: none;
 }
